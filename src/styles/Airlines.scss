@@ -1,0 +1,41 @@
+.Airlines {
+    margin: 20px;
+
+    input {
+        margin: 0 25px;
+        font-size: 20px;
+        padding: 5px;
+        width: 380px;
+    }
+}
+
+.Airlines-title {
+    text-align: center;
+    font-size: 50px;
+    color: #444;
+    margin: 20px;
+}
+
+.Airlines-wrapper {
+    margin: 20px;
+}
+
+.Airline {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #dedede;
+    width: 230px;
+    border-radius: 5px;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+        background-color: #dedede;
+    }
+}
+
+.Airlines-loading {
+    font-size: 25px;
+    text-align: center;
+    margin: 20px;
+}
