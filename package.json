@@ -1,8 +1,10 @@
 {
-  "name": "amadeus",
+  "name": "amadeus-dev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "amadeus": "^3.0.0",
+    "node-sass": "^4.11.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.4"
