@@ -1,0 +1,29 @@
+.Home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    video {
+        height: 100vh;
+        min-width: 100vw;
+        object-fit: cover;
+    }
+
+    .Home-title {
+        font-size: 130px;
+        font-weight: 500;
+        position: absolute;
+        top: 10%;
+        right: 12%;
+        width: 500px;
+        text-align: right;
+        color: white;
+    }
+
+    .Home-content {
+        margin-top: 100px;
+    }
+}
