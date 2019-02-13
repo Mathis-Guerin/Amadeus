@@ -1,9 +1,31 @@
 .Header {
-    height: 60px;
-    background-color:#e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:white;
+    opacity: 0.5;
 
-    img {
-        height: 30px;
-        padding: 15px;
+    .Header-image {
+        display: inline-block;
+
+        img {
+            height: 30px;
+            padding: 12px 12px 8px;
+        }
+    }
+
+    .Header-menu {
+        display: inline-block;
+    }
+
+    .Header-menu-item {
+        padding: 16px;
+        text-decoration: none;
+        font-size: 23px;
+        color:#056eb9;
+
+        &:hover {
+            color: #2196f3
+        }
     }
 }
