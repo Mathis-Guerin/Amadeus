@@ -1,14 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import '../styles/Header.scss';
 import logo from '../assets/img/amadeus.png'
-
 
 function Header() {
 
 
     return (
         <div className="Header">
-            <img alt="Amadeus Logo" src = {logo}/>
+            <div className="Header-image">
+                <img alt="Amadeus Logo" src = {logo}/>
+            </div>
+            <div className="Header-menu">
+                <Link to="/" className="Header-menu-item">Home</Link>
+                <Link to="/airlines" className="Header-menu-item">Airlines</Link>
+            </div>
         </div>
     )
 }
