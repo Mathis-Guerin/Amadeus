@@ -14,6 +14,7 @@ function Header() {
             <div className="Header-menu">
                 <Link to="/" className="Header-menu-item">Home</Link>
                 <Link to="/airlines" className="Header-menu-item">Airlines</Link>
+                <Link to="/flights" className="Header-menu-item">Flights</Link>
             </div>
         </div>
     )
