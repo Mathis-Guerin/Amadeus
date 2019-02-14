@@ -15,9 +15,6 @@ function Home() {
             <div className="Home-title"> 
                 Discover the world
             </div>
-            <div className="Home-content"> 
-                Extra content
-            </div>
         </div>
     )
 }
