@@ -16,7 +16,7 @@
     .FlightDetails-OD {
         display: inline-block;
         width: 75%;
-        background-color: #43b1ff;
+        background-color: #9fd7ff;
 
         span {
             padding: 0 20px;
@@ -30,11 +30,23 @@
     .FlightDetails-price {
         display: inline-block;
         width: 25%;
-        background-color: #43b1ff;
+        background-color: #9fd7ff;
         text-align: right;
     }
 
     .FlightDetails-dates {
         padding: 20px;
+    }
+
+    .FlightDetails-book {
+        background-color: #43b1ff;
+        text-align: center;
+        cursor: pointer;
+        padding: 5px 0;
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+            background-color: #267ebd;
+        }
     }
 }
