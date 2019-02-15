@@ -47,3 +47,19 @@
     border: 1px solid #ff5050;
     border-radius: 3px;
 }
+
+.Flight-details {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #dedede;
+    width: 230px;
+    border-radius: 5px;
+    transition: all ease-in-out 0.2s;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        background-color: #b8dfff;
+    }
+}
