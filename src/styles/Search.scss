@@ -1,0 +1,45 @@
+.Search {
+    margin: 20px;
+
+    .Search-title {
+        text-align: center;
+        font-size: 50px;
+        color: #444;
+        margin: 20px;
+    }
+
+    .Search-input-field {
+        margin: 10px;
+    }
+
+    .Search-arrival, .Search-departure {
+        display: inline-block;
+        width: calc(50% - 40px);
+        padding: 20px;
+    }
+
+    .Search-OD-title {
+        padding: 5px;
+    }
+
+    .Search-select {
+        padding: 5px;
+    }
+
+    .Search-button-wrapper {
+        padding: 10px 30px;
+        text-align: right;
+    }
+
+    .Search-button {
+        background-color: #2196f3;
+
+        &:hover {
+            background-color: #056eb9;
+        }
+    }
+
+    .Search-button-icon {
+        padding: 0 10px;
+    }
+}

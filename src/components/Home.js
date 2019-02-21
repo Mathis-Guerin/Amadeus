@@ -1,7 +1,6 @@
 import React from 'react';
 import HomeVideoWebm from '../assets/img/HomeVideo2.webm'
 import HomeVideoMp4 from '../assets/img/HomeVideo2.mp4'
-import HomeVideoJpg from '../assets/img/HomeVideo2.jpg'
 import '../styles/Home.scss'
 
 
