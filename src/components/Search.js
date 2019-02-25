@@ -5,7 +5,7 @@ import AsyncSelect from 'react-select/lib/Async';
 import Button from '@material-ui/core/Button';
 import FlightIcon from '@material-ui/icons/Flight';
 import Offer from './Offer';
-import loadingGif from '../assets/img/loading.gif'
+import loadingGif from '../assets/img/loading.gif';
 
 function Search() {
   const amadeus = useContext(AmadeusContext);
@@ -105,8 +105,10 @@ function Search() {
         <div className="Airlines-loading">
           <img src={loadingGif} alt="Loading"></img>
         </div>
-      :offers.map((offer) =>
-        <Offer key={offer.id} offer={offer}/>)
+      :<div className="Offer-wrapper">
+        {offers.map((offer) =>
+          <Offer key={offer.id} offer={offer}/>)}
+        </div>
       }
     </div>
   );
