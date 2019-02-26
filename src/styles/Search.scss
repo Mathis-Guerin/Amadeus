@@ -1,5 +1,6 @@
 .Search {
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
 
     .Search-title {
         text-align: center;
@@ -44,7 +45,12 @@
     }
 
     .Offer-wrapper {
-        width: 60%;
+        width: 80%;
         margin: 30px auto;
+
+        @media (min-width: 800px) {
+            width: 60%;
+        }
+
     }
 }

@@ -3,4 +3,59 @@
     margin: 20px 0;
     border-radius: 2px;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
+
+    .Offer-top {
+        position: relative;
+    }
+
+    .Offer-price {
+        position: absolute;
+        top: 0;
+        right: 59px;
+        font-size: 26px;
+    }
+
+    .Offer-direct {
+        color: #0ab71a;
+        font-weight: bold;
+    }
+
+    .Offer-stop {
+        color: #e28700;
+        font-weight: bold;
+    }
+
+    .Offer-keydown {
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+        width: 30px;
+        height: 30px;
+        color: #909090;  
+    }
+
+    .Offer-bottom {
+        overflow: hidden;
+        padding-top: 10px;
+    }  
+
+    .Offer-OD-icon {
+        margin: 0 5px;
+        &.Offer-OD-icon-departure {
+            color: #008c4b;
+        }
+        &.Offer-OD-icon-arrival {
+            color: #2196f3;
+        }
+    }
+
+    .Offer-OD-item {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+
+        &.Offer-OD-item-iata {
+            font-weight: bold;
+        }
+    }
 }
