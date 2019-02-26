@@ -4,10 +4,13 @@ export function capitalizeFirstLetter(string) {
 
 export default function formatDate(param) {
     const date = new Date(param)
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const longOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const shortOptions = { month: 'long', day: 'numeric' };
+    const hourOptions = {hour: '2-digit', minute:'2-digit'};
 
     return {
-        date: date.toLocaleDateString("en-US", options),
-        time: date.toLocaleTimeString("en-US")
+        date: date.toLocaleDateString("en-US", longOptions),
+        shortDate: date.toLocaleDateString("en-US", shortOptions),
+        time: date.toLocaleTimeString([], hourOptions)
     }
 }
