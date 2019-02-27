@@ -9,8 +9,8 @@ This project allowed me to :
 - [x] Use Promises
 - [x] Create routing with React Router
 - [x] Use some Material-UI components
-- [x] Use Async React Select 
-
+- [x] Use Async React Select
+- [X] Create animations with React-Motion
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

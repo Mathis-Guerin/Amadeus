@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { AmadeusContext } from '../App.js';
 import '../styles/Search.scss';
 import AsyncSelect from 'react-select/lib/Async';
@@ -6,10 +6,14 @@ import Button from '@material-ui/core/Button';
 import FlightIcon from '@material-ui/icons/Flight';
 import Offer from './Offer';
 import loadingGif from '../assets/img/loading.gif';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import moment from 'moment'
 
 function Search() {
   const amadeus = useContext(AmadeusContext);
   const [offers, setOffers] = useState([]);
+  const [searchDate, setSearchDate] = useState(new Date())
   const [searchDeparture, setSearchDeparture] = useState('');
   const [searchArrival, setSearchArrival] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +24,7 @@ function Search() {
       .get({
         origin: searchDeparture,
         destination: searchArrival,
-        departureDate: '2019-08-01',
+        departureDate: searchDate,
       })
       .then(function(response) {
         setOffers(response.data);
@@ -33,6 +37,26 @@ function Search() {
         setOffers([]);
       });
   };
+
+  useEffect(() => {
+    setIsLoading(true)
+    amadeus.shopping.flightOffers
+      .get({
+        origin: 'BOS',
+        destination: 'JFK',
+        departureDate: '2019-08-01',
+      })
+      .then(function(response) {
+        setOffers(response.data);
+        setIsLoading(false)
+        console.log(response.data);
+      })
+      .catch(function(error) {
+        setIsLoading(false)
+        console.log(error.code);
+        setOffers([]);
+      });
+  }, []);
 
   function promiseOptions(inputValue) {
     return new Promise((resolve, reject) => {
@@ -71,6 +95,10 @@ function Search() {
     setSearchArrival(inputValue.value)
   }
 
+  function handleDateChange(date) {
+    setSearchDate(moment(date).format('YYYY-MM-DD'))
+  }
+
   return (
     <div className="Search">
       <div className="Search-title">Search a flight</div>
@@ -94,6 +122,15 @@ function Search() {
           onChange={onInputArrivalChange}
           placeholder="Arrival"
           className="Search-select"
+        />
+      </div>
+      <div className="Search-date">
+        <div className="Search-OD-title">Departure date</div>
+        <DatePicker
+          selected={searchDate}
+          onChange={handleDateChange}
+          dateFormat='YYYY-MM-dd'
+          className="Search-Datepicker"
         />
       </div>
       <div onClick={searchFlight} className="Search-button-wrapper">

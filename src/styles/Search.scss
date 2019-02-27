@@ -15,25 +15,27 @@
 
     .Search-arrival, .Search-departure {
         display: inline-block;
-        width: calc(50% - 40px);
-        padding: 20px;
+        margin: 10px 20px;
+        width: calc(100% - 40px);
+
+        @media (min-width: 800px) {
+            width: calc(35% - 40px);
+        }
     }
 
     .Search-OD-title {
         padding: 5px;
     }
 
-    .Search-select {
-        padding: 5px;
-    }
-
     .Search-button-wrapper {
-        padding: 10px 30px;
-        text-align: right;
+        display: flex;
+        justify-content: center;
+        padding: 1em 6em;
     }
 
     .Search-button {
         background-color: #2196f3;
+        float: right;
 
         &:hover {
             background-color: #056eb9;
@@ -51,6 +53,23 @@
         @media (min-width: 800px) {
             width: 60%;
         }
+    }
 
+    .Search-date {
+        margin: 10px 20px;
+        display: inline-block;
+        width: calc(50% - 40px);
+
+        @media (min-width: 800px) {
+            width: calc(30% - 40px);
+        }
+    }
+
+    .Search-Datepicker {
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #2196f3;
+        font-size: 16px;
+        color: #444;
     }
 }
